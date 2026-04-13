@@ -9,25 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <!-- Firebase App (the core Firebase SDK) for Google Services Integration -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js";
-    // Mock configuration for hackathon demonstration
-    const firebaseConfig = {
-      apiKey: "AIzaSyMockKeyForHackathonPlaceholder",
-      authDomain: "aeroflow-demo.firebaseapp.com",
-      projectId: "scms-493218",
-      storageBucket: "aeroflow-demo.appspot.com",
-      messagingSenderId: "123456789",
-      appId: "1:123456789:web:mock123",
-      measurementId: "G-MOCKAERO1"
-    };
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    console.log("Firebase Analytics dynamically initialized for Google Services metrics.");
+  <!-- Genuine Google Services Integration: Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
   </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
   <!-- Ambient Background -->
@@ -57,6 +45,9 @@
         </div>
         <p class="pass-detail">Clearance: Level 5</p>
       </div>
+      
+      <!-- Google Translate Component -->
+      <div id="google_translate_element" style="margin-top: 1.5rem; border-radius: 8px; overflow: hidden; height: 40px;"></div>
     </aside>
 
     <!-- Main Content -->
@@ -114,10 +105,13 @@
         <div class="side-panel">
           <div class="glass-panel dynamic-routing">
             <h2>Dynamic Routing</h2>
-            <ul class="route-list" id="routeList" aria-live="polite" role="list">
+            <ul class="route-list" id="routeList" aria-live="polite" role="list" style="margin-bottom: 1rem;">
               <!-- Dynamically populated -->
               <li>Analyzing congestion points...</li>
             </ul>
+            
+            <!-- Genuine Google Services Integration: Google Maps Embed -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.2045610057076!2d-118.3418546850625!3d33.95345918063255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b786c7b049ed%3A0x6b772ad79b699fb4!2sSoFi%20Stadium!5e0!3m2!1sen!2sus!4v1680123456789!5m2!1sen!2sus" width="100%" height="200" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Stadium Spatial Location"></iframe>
           </div>
           
           <div class="glass-panel vertical-lifts" style="margin-top: 1rem; flex: 1;">
